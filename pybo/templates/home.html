@@ -1,5 +1,6 @@
 <h1>input 입력</h1>
 <form action="{% url 'pybo:index'%}" method="POST">
+    
     {% csrf_token %}
     <input name="age" placeholder="age"/>
     <input name="gender" placeholder="gender"/>
@@ -8,6 +9,20 @@
     <input name="grade" placeholder="grade"/>
     <input name="type" placeholder="type"/>
     <br/>
+    <br/>
+    age : 나이 <br>
+    gender : 남자1, 여자2 <br>
+    goal : 설정목표, str <br>
+    category : 8대영역 중 1개 <br>
+    grade(kcb 연소득 데이터) : 1~7 <br>
+    ("2,000만원미만: 1 , 
+    2,000만원이상~3,000만원미만: 2, 
+    3,000만원이상~4,000만원미만: 3 , 
+    4천만원이상~5,000만원미만: 4, 
+    5,000만원이상~6,000만원미만: 5, 
+    6,000만원이상~7,000만원미만: 6, 
+    7,000만원이상: 7) <br>
+    type: 적극투자=0, 균형투자=1, 안전투자=2, 보수투자=3 <br>
     <br/>
     <button type="submit">result</button>
 </form>
