@@ -31,6 +31,7 @@ def index(request):
     grade = request.POST['grade']
     type = request.POST['type']
     d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11 = get_data(age,gender,goal,category,type,grade)
+    new5 = d5[0][0]['GeumYungHoesa'] + ' No.'+str(d5[0][0]['cardNo'])
     new7 = d7[0][0]['KorCoNm'] +' '+ d7[0][0]['FinPrdtNm']
     new8 = d8[0][0]['KorCoNm'] +' '+ d8[0][0]['FinPrdtNm']
     new9 = d9[0][0]['KorCoNm'] +' '+ d9[0][0]['FinPrdtNm']
@@ -39,7 +40,7 @@ def index(request):
            'type_finan' : d2[2][0]['펀드명'],
            'obj_insur' : d3,
            'goal_insur' : d4[0][1]['상품명'],
-           'obj_card' : d5[0][0],
+           'obj_card' : new5,
            'obj_deposit' : d6[0][0]['상품명'],
            'obj_savings' : new7,
            'obj_loan' : new8,
