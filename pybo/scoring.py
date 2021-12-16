@@ -28,6 +28,8 @@ path = './pybo/base/수시입출금_가중치완료_데모변수_추출완료.cs
 
 def recommend_product(age, gender):
     df = pd.read_csv(path, encoding='utf-8') 
+    age = int(age)
+    gender = int(gender)
     
     if age < 20 : 
         df1 = df[(df['나이2'] == '') | (df['10대'] == 1)]

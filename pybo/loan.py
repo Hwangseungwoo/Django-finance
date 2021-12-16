@@ -5,6 +5,8 @@ from pandas import json_normalize
 
 
 def main_data(sex, age, grade, goal):
+    age = int(age)
+    sex = int(sex)
     # 목표설정에 대한 가중치
     weights = [0, 0, 0, 0]  # 전세대출, 주택담보대출, 개인신용대출, 중금리대출 가중치
     if ('전세' in goal) or ('주택청약저축' in goal) or ('월세' in goal):

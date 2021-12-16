@@ -1,0 +1,13 @@
+<h1>input 입력</h1>
+<form action="{% url 'pybo:index'%}" method="POST">
+    {% csrf_token %}
+    <input name="age" placeholder="age"/>
+    <input name="gender" placeholder="gender"/>
+    <input name="goal" placeholder="goal"/>
+    <input name="category" placeholder="category"/>
+    <input name="grade" placeholder="grade"/>
+    <input name="type" placeholder="type"/>
+    <br/>
+    <br/>
+    <button type="submit">result</button>
+</form>

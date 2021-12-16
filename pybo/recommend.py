@@ -127,7 +127,6 @@ def finan_data_input(x,e,f,g,h,u):
       f1 = f[(f.재무==100) & ((f.위험=='매우낮은위험') | (f.위험 == '낮은위험'))].sort_values(by=['3년 수익률','1년 수익률','6개월 수익률'],ascending=False)
       f2 = f[(f.재무!=100) & ((f.위험=='매우낮은위험') | (f.위험 == '낮은위험'))].sort_values(by=['3년 수익률','1년 수익률','6개월 수익률'],ascending=False)
     fund_1 = f1.head(3)
-
     fund_2 = f2.head(3)
     finan_list.append(fund_1.to_dict('records'))
     finan_list.append(fund_2.to_dict('records'))
@@ -445,6 +444,9 @@ def cal_insur(sex, age, goal, category,d):
 # gender는 남자는 1, 여자는 2
 def final_get(age,gender,goal,category,trait):
   a,b,c,d,o,p,e,f,g,h,u = read()
+  age = int(age)
+  gender = int(gender)
+  trait = int(trait)
   
   no_trait_finan_list = []
   no_trait_finan_list = obj_finan(e,f,g,h,u)

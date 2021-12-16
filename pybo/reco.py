@@ -1,6 +1,8 @@
 import pandas as pd
 
 def general_reco(gender, age):
+    age = int(age)
+    gender = int(gender)
     lst = []
     general_reco = pd.read_csv('./pybo/base/general_reco.csv', encoding='utf-8')
     general_reco = general_reco.drop_duplicates()
