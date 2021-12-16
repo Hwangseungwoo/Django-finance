@@ -10,6 +10,19 @@ def general_reco(gender, age):
         sex = "M"
     else:
         sex = "F"
+        
+    if age < 30 :
+        age = 20
+    elif age < 40 :
+        age = 30
+    elif age < 50 : 
+        age = 4
+    elif age < 60 :
+        age = 50
+    elif age < 70 :
+        age = 60
+    else: 
+        age = 70
     persona = str(sex)+'_'+str(age)+'_avg'
     temp = pd.DataFrame()
     temp = general_reco[['Jonglyu','GeumYungHoesa','cardNo',persona,'limit']]

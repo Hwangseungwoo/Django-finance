@@ -422,7 +422,7 @@ def cal_insur(sex, age, goal, category,d):
   # 대표키워드 포함 안될시
   else:
     # 문장 유사도 검색
-    goal_insu(goal)
+    goal_insu(goal,d)
 
     # 유사도 결과가 전부 0이 아니면
     if d.iloc[0].유사도!=0:
