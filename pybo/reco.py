@@ -16,7 +16,7 @@ def general_reco(gender, age):
     elif age < 40 :
         age = 30
     elif age < 50 : 
-        age = 4
+        age = 40
     elif age < 60 :
         age = 50
     elif age < 70 :
